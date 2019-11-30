@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <title>HypeBuy</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .modal {
+      transition: opacity 0.25s ease;
+    }
+
+    body.modal-active {
+      overflow-x: hidden;
+      overflow-y: visible !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex flex-col content-between w-64">
+    <div class="flex flex-row justify-center content-between w-64 py-2">
+      <h1 class="text-xl text-center text-red-600">HypeBuy For Chrome</h1>
+    </div>
+    <div class="flex flex-row justify-center content-between w-64">
+      <span class="text-base text-center">Detected shipping price: <ins>$8</ins></span>
+    </div>
+    <div class="flex flex-row justify-center content-between w-64">
+      <span class="text-base text-center">HypeBuy rebate amount: <ins id="rebate">?</ins></span>
+    </div>
+    <div class="flex flex-row justify-center content-between w-64">
+      <span class="text-base text-center">Net shipping cost: <ins id="netCost" class="text-red-600">?</ins></span>
+    </div>
+    <flex class="flex flex-row content-between justify-center w-64 py-2">
+      <button id="checkHypeBuy" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Save on
+        shipping now!</button>
+    </flex>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
